@@ -20,20 +20,32 @@ const btnGenerate = document.querySelector('#button');
 
 btnGenerate.addEventListener('click', function(){
 
+const winnerHtml = document.getElementById('winner');    
+const looserHtml = document.getElementById('looser');
+const eventHtml = document.getElementById('even');
+
 const choose_number = Number(document.getElementById ('userInput').value);
 console.log(choose_number);
 
 const pcNumber = Math.floor(Math.random() * 6) + 1;
 console.log(pcNumber);
 
+
+
 if (choose_number === pcNumber) {
-    console.log('pari');
+    //console.log('pari');
+    const even = (choose_number === pcNumber)
+    eventHtml.classList.remove('d-none')
 
 }else if (choose_number > pcNumber){
-    console.log('hai vinto');
+    //console.log('hai vinto');
+    const winner = (choose_number > pcNumber)
+    winnerHtml.classList.remove("d-none")
 
 }else {
-    console.log('hai perso');
+    //console.log('hai perso');
+    //const looser = prompt("Hai perso")
+    loosertHtml.classList.remove('d-none')
 }
 
 
@@ -43,8 +55,11 @@ const cancelHtml = document.getElementById('cancel');
 
 cancelHtml.addEventListener('click', function(){
 
-    
-    choose_number.value = "";
+
+    winnerHtml.classList.add('d-none')
+    loosertHtml.classList.add('d-none')
+    eventHtml.classList.add('d-none')
+
 })
 
 
