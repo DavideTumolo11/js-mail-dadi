@@ -45,7 +45,7 @@ if (choose_number === pcNumber) {
 }else {
     //console.log('hai perso');
     //const looser = prompt("Hai perso")
-    loosertHtml.classList.remove('d-none')
+    looserHtml.classList.remove('d-none')
 }
 
 
@@ -57,7 +57,7 @@ cancelHtml.addEventListener('click', function(){
 
 
     winnerHtml.classList.add('d-none')
-    loosertHtml.classList.add('d-none')
+    looserHtml.classList.add('d-none')
     eventHtml.classList.add('d-none')
 
 })
